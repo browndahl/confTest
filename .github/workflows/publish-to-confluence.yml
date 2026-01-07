@@ -1,0 +1,24 @@
+name: Publish to Confluence
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish to Confluence
+        uses: Gershon-A/publish-release-to-confluence@v1.0.4
+        with:
+          spaceId: '4915495102'
+          status: 'current'
+          title: 'Release: test'
+          parentId: '5298061319'
+          ConfluenceBaseUrl: 'https://sallinggroup.atlassian.net'
+          tag: 'v1.0.0'
+          confluence_email: ${{ vars.CONFLUENCE_EMAIL }}
+          confluence_api_token: ${{ secrets.CONF }}
+          appName: 'confTest'
+          ConfluenceSpaceKey: 'TAMAN'
+          repoOwner: ${{ github.repository_owner }}
+          repoName: ${{ github.event.repository.name }}
