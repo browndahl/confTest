@@ -15,7 +15,7 @@ jobs:
           title: 'Release: test'
           parentId: '5298061319'
           ConfluenceBaseUrl: 'https://sallinggroup.atlassian.net'
-          tag: 'v1.0.0'
+          tag: 'v1.0.1'
           confluence_email: ${{ vars.CONFLUENCE_EMAIL }}
           confluence_api_token: ${{ secrets.CONF }}
           appName: 'confTest'
