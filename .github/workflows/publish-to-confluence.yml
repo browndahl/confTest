@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish to Confluence
-        uses: publish-release-to-confluence@v1.0.4
+        uses: Gershon-A/publish-release-to-confluence@v1.0.4
         with:
           spaceId: '4915495102'
           status: 'current'
